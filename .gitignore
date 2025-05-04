@@ -31,3 +31,4 @@ Thumbs.db
 
 # Optional: if using coverage tools like Jest or Vitest
 coverage/
+.vercel
