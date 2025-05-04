@@ -17,3 +17,7 @@ app.use("/api/urls", urlRouter);
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
+
+export default (req: any, res: any) => {
+  app(req, res);
+};
