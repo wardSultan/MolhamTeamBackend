@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node-dev --respawn src/app.ts",
-    "build": "echo 'Nothing to build'"
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "author": "ward sultan",
   "license": "ISC",
