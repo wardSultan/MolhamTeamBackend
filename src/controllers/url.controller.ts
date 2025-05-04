@@ -56,7 +56,6 @@ export const getUrlController = async (req: Request, res: Response) => {
 
   try {
     const url = await getUrlByShortId(shortId);
-    res.status(200).json(url);
   } catch (err) {
     if (err instanceof Error) {
       res.status(404).json({ error: err.message });
@@ -72,7 +71,8 @@ export const redirectUrl = async (req: Request, res: Response) => {
 
     const originalUrl = await redirectToOriginalUrl(shortId);
 
-    res.redirect(originalUrl);
+    // res.redirect(originalUrl);
+    res.status(200).json(originalUrl);
   } catch (err) {
     console.error(err);
     res.status(404).send("URL not found");
